@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    /* --main-color: #1c542d; */
+    /* --main-color: hsl(240, 26%, 5%); */
+    --main-color: #121212;
+    --primary-color: #1c542d;
+    --yellow-color: hsla(190, 53%, 19%, 1);
+    --secondary-variation: #e6daa8;
+    --third-variation: #17424b;
+    --secondary-color: linear-gradient(120deg, var(--third-variation), var(--primary-color), #0a5766);
+    --pink-gang: #df00ad;
+    --font-color: #ffff;
+    --green-color: #4caf50;
+    --gray-color: #808080;
+    --blue-color: #007acc;
+    --gradient-mesh: radial-gradient(at 81% 76%, hsla(190, 53%, 19%, 1) 0px, transparent 50%),
+      radial-gradient(at 53% 29%, hsl(138, 40%, 51%) 0px, transparent 50%),
+      radial-gradient(at 78% 22%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 25%, hsla(193, 59%, 64%, 1) 0px, transparent 50%),
+      radial-gradient(at 22% 89%, hsla(157, 60%, 75%, 1) 0px, transparent 50%);
+    --black-mesh: radial-gradient(at 47% 8%, hsla(180, 0%, 0%, 1) 0px, transparent 50%),
+      radial-gradient(at 54% 59%, hsla(180, 12%, 4%, 1) 0px, transparent 50%),
+      radial-gradient(at 15% 97%, hsla(180, 1%, 16%, 1) 0px, transparent 50%),
+      radial-gradient(at 77% 11%, hsla(183, 3%, 11%, 1) 0px, transparent 50%),
+      radial-gradient(at 86% 100%, hsla(240, 3%, 13%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 2%, hsla(341, 0%, 20%, 1) 0px, transparent 50%);
+    --black-mesh-test: radial-gradient(at var(--x) var(--y), hsla(122, 3%, 16%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x1) var(--y1), hsla(73, 2%, 12%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x2) var(--y2), hsla(180, 0%, 0%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x3) var(--y3), hsla(180, 12%, 4%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x4) var(--y4), hsla(180, 1%, 16%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x5) var(--y5), hsla(183, 3%, 11%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x6) var(--y6), hsla(240, 3%, 13%, 1) 0px, transparent 50%);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    background: var(--main-color);
+    cursor: default;
+    overflow-x: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: auto;
+  }
+  
+  body {
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif; */
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-color);
+    overflow-y: auto;
+  }
+  
+  @property --x {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 34%;
+  }
+  
+  @property --y {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 37%;
+  }
+  
+  @property --x1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 6%;
+  }
+  
+  @property --y1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 81%;
+  }
+  
+  @property --x2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 47%;
+  }
+  
+  @property --y2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 8%;
+  }
+  
+  @property --x3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 54%;
+  }
+  
+  @property --y3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 59%;
+  }
+  
+  @property --x4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 13%;
+  }
+  
+  @property --y4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+  }
+  
+  @property --x5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 77%;
+  }
+  
+  @property --y5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 11%;
+  }
+  
+  @property --x6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 86%;
+  }
+  
+  @property --y6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 100%;
+  }
+  
+  .mesh-container {
+    --x: 34%;
+    --y: 37%;
+    --x1: 6%;
+    --y1: 51%;
+    --x2: 47%;
+    --y2: 8%;
+    --x3: 54%;
+    --y3: 39%;
+    --x4: 13%;
+    --y4: 20%;
+    --x5: 77%;
+    --y5: 11%;
+    --x6: 66%;
+    --y6: 40%;
+    width: 100%;
+    background: linear-gradient(to bottom, #121212, transparent);
+    background-image: radial-gradient(at var(--x) var(--y), hsla(120, 3%, 26%, 1) 0px, transparent 50%),
+      radial-gradient(at var(--x1) var(--y1), hsla(60, 75%, 41%, 0.5) 0px, transparent 50%),
+      radial-gradient(at var(--x2) var(--y2), hsla(240, 51%, 53%, 0.3) 0px, transparent 50%),
+      radial-gradient(at var(--x3) var(--y3), hsla(180, 74%, 45%, 0.4) 0px, transparent 50%),
+      radial-gradient(at var(--x4) var(--y4), hsla(180, 77%, 48%, 0.5) 0px, transparent 50%),
+      radial-gradient(at var(--x5) var(--y5), hsla(180, 38%, 46%, 0.3) 0px, transparent 50%),
+      radial-gradient(at var(--x6) var(--y6), hsla(240, 69%, 40%, 0.1) 0px, transparent 50%);
+    animation: testMovement 50s linear infinite;
+    z-index: 3;
+    overflow-y: hidden;
+  }
+  
+  @keyframes testMovement {
+    0% {
+      --x: 34%;
+      --y: 37%;
+      --x1: 6%;
+      --y1: 51%;
+      --x2: 47%;
+      --y2: 8%;
+      --x3: 54%;
+      --y3: 39%;
+      --x4: 13%;
+      --y4: 20%;
+      --x5: 77%;
+      --y5: 11%;
+      --x6: 66%;
+      --y6: 40%;
+    }
+  
+    50% {
+      --x: 45%;
+      --y: 47%;
+      --x1: 60%;
+      --y1: 52%;
+      --x2: 50%;
+      --y2: 35%;
+      --x3: 74%;
+      --y3: 19%;
+      --x4: 33%;
+      --y4: 49%;
+      --x5: 27%;
+      --y5: 41%;
+      --x6: 76%;
+      --y6: 30%;
+    }
+  
+    100% {
+      --x: 34%;
+      --y: 37%;
+      --x1: 6%;
+      --y1: 51%;
+      --x2: 47%;
+      --y2: 8%;
+      --x3: 54%;
+      --y3: 39%;
+      --x4: 13%;
+      --y4: 20%;
+      --x5: 77%;
+      --y5: 11%;
+      --x6: 66%;
+      --y6: 40%;
+    }
+  }
+  
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  
+  h1 {
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 5, 5vw, 4rem);
+    font-weight: 400;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+  }
+  
+  p {
+    font-size: clamp(1rem, 3vw, 1.75rem);
+    font-weight: 100;
+  }
+  
+  a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: white;
+    /* border: 2px solid yellow; */
+  }
+  
+  ul {
+    font-size: 2rem;
+  }
+  
+  .custom-cursor {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--secondary-variation);
+    border-radius: 100%;
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: 200ms width, 200ms height;
+  }
+  
+  .cursor-grow {
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Navbar properties */
+  
+  .hamburger-icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid white; */
+    gap: 0.5rem;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    height: 5rem;
+    width: max(4rem, 5%);
+    cursor: pointer;
+    z-index: 2;
+    /* background: var(--primary-color); */
+    /* position: absolute; */
+  }
+  
+  .rect-dimensions {
+    height: 0.35rem;
+    width: 2.5rem;
+    background: #ffff;
+    transition: width 500ms, height 500ms, transform 500ms;
+  }
+  
+  .hover-thing:hover .rect-dimensions {
+    height: 0.45rem;
+    width: 2.65rem;
+  }
+  
+  .rotation-top {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  
+  .rotation-bottom {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  
+  .nav-expanded {
+    width: max(25rem, 30%);
+    height: 25rem;
+  }
+  
+  nav {
+    width: max(4rem, 5%);
+    height: 5rem;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    background: var(--yellow-color);
+    z-index: 1;
+    transition: 500ms width, 500ms height;
+    border: 3px solid var(--secondary-variation);
+    /* mix-blend-mode: difference; */
+  }
+  
+  nav ul {
+    /* border: 2px solid white; */
+    height: 65%;
+    margin-top: 15%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  nav .mn-lst {
+    /* border: 2px solid white; */
+    height: 4rem;
+    width: max-content;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  
+  .mn-lst::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0%;
+    height: 0.15rem;
+    background: var(--secondary-variation);
+    transition: width 200ms ease-in;
+  }
+  
+  .mn-lst:hover {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+  }
+  
+  .mn-lst:hover::after {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .nav-expanded {
+      height: 20rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    nav {
+      height: 3rem;
+      width: 3rem;
+      background: transparent;
+      border: transparent;
+      transition: background 500ms, height 500ms, width 500ms;
+    }
+  
+    .hamburger-icon {
+      height: 3rem;
+      width: 3rem;
+      gap: 0.3rem;
+    }
+  
+    .hover-thing {
+      mix-blend-mode: difference;
+    }
+  
+    .nav-expanded {
+      width: 50%;
+      height: 40%;
+      background: var(--yellow-color);
+      mix-blend-mode: normal;
+    }
+  
+    nav li {
+      /* border: 2px solid white; */
+      font-size: 1.25rem;
+    }
+  
+    .rect-dimensions {
+      height: 0.25rem;
+      width: 2rem;
+    }
+  
+  }
+  
+  .hidden {
+    visibility: hidden;
+  }
+  
+  /* General padding and spacing values. */
+  
+  .div-padding {
+    display: flex;
+    background: transparent;
+    height: 100dvh;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    /* border: 2px solid red; */
+  }
+  
+  .div-width {
+    width: 90%;
+  }
+  
+  .intro-div {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    align-self: center;
+    /* border: 2px solid yellow; */
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    .div-width {
+      width: 100%;
+    }
+  
+    .intro-div {
+      flex-direction: column;
+      height: 100%;
+      /* border: 2px solid blue; */
+    }
+  
+  }
+  
+  section {
+    /* border: 2px solid blue; */
+  }
+  
+  /* Fixed screen effect */
+  
+  .pop-points {
+    position: absolute;
+    /* border: 2px solid red; */
+    background: white;
+    border-radius: 100%;
+    animation: pop infinite;
+    transition: transform 200ms;
+  }
+  
+  .pop-points:hover {
+    transform: scale(3);
+  }
+  
+  @keyframes pop {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Styling for the Introduction component. */
+  
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    /* border: 2px solid red; */
+  }
+  
+  @keyframes textChange {
+  
+    0% {
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    50% {
+      font-family: 'Cormorant', serif;
+    }
+  
+    100% {
+      font-family: 'Lora', serif;
+    }
+  
+  }
+  
+  .intro-content::after {
+    content: '';
+    position: relative;
+    margin-top: 1rem;
+    height: 100%;
+    width: 0.5rem;
+    background: var(--font-color);
+  }
+  
+  .intro-content::before {
+    content: '';
+    position: relative;
+    height: 100%;
+    width: 0.5rem;
+    background: var(--font-color);
+  }
+  
+  .intro-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+  }
+  
+  figure {
+    height: 90%;
+    width: 80%;
+    border-radius: 2rem;
+    border: 2px solid pink;
+    /* background-image: url('../public/photo1Personal.jpeg'); */
+    background-position: auto 100%;
+    background-size: cover;
+    z-index: 0;
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    .mesh-container {
+      background-image: none;
+    }
+  
+    #introduction {
+      background: linear-gradient(to bottom, #121212, transparent);
+      background-image: radial-gradient(at var(--x) var(--y), hsla(122, 3%, 16%, 1) 0px, transparent 50%),
+        radial-gradient(at var(--x1) var(--y1), hsla(60, 83%, 52%, 0.5) 0px, transparent 50%),
+        radial-gradient(at var(--x2) var(--y2), rgb(74, 74, 196, 0.4) 0px, transparent 50%),
+        radial-gradient(at var(--x3) var(--y3), hsl(180, 74%, 45%, 0.1) 0px, transparent 50%),
+        radial-gradient(at var(--x4) var(--y4), hsl(180, 77%, 48%, 0.6) 0px, transparent 50%),
+        radial-gradient(at var(--x5) var(--y5), hsl(180, 38%, 46%, 0.5) 0px, transparent 50%),
+        radial-gradient(at var(--x6) var(--y6), hsl(240, 69%, 40%, 0.3) 0px, transparent 50%);
+      animation: testMovement 30s linear infinite;
+    }
+  
+    .intro-content {
+      margin-inline: auto;
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid red; */
+    }
+  
+    .intro-content::after {
+      content: '';
+      position: relative;
+      margin-top: 1rem;
+      height: 0.2rem;
+      width: 100%;
+    }
+  
+    .intro-content::before {
+      content: '';
+      position: relative;
+      height: 0.2rem;
+      width: 100%;
+    }
+  
+    .intro-photo {
+      width: 100%;
+      height: 50%;
+      /* border: 2px solid pink; */
+    }
+  }
+  
+  /* Styling for the descritpion component */
+  
+  .description-container {
+    /* border: 2px solid pink; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .fs-container {
+    width: 100%;
+    height: 30dvh;
+    background: transparent;
+    /* background-image: var(--gradient-mesh); */
+    /* position: sticky; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* animation: 3s shrinky linear forwards; */
+    text-align: center;
+    transition: height 1000ms;
+    animation: gradientMovement 5000ms linear infinite;
+  }
+  
+  .fs-container-shrinked {
+    /* height: 30dvh; */
+    animation: gradientMovement 5000ms linear infinite;
+  }
+  
+  .ds-title {
+    font-size: clamp(6rem, 10vw, 15rem);
+    transition: font-size 1000ms;
+    position: relative;
+    /* top: 15rem; */
+    /* opacity: 0; */
+  }
+  
+  .ds-title-shrinked {
+    font-size: clamp(4rem, 8vw, 10rem);
+  }
+  
+  .ds-container {
+    /* height: 70dvh; */
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+  }
+  
+  .ds-fds {
+    /* border: 2px solid yellow; */
+  }
+  
+  .ds-padding {
+    padding: 2rem 1rem;
+  }
+  
+  .ds-skls {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid green; */
+    justify-content: space-around;
+  }
+  
+  .ds-ls h4 {
+    font-size: clamp(1.15rem, 5.5vw, 3.5rem);
+    font-weight: 100;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+  }
+  
+  .ds-ls ul {
+    list-style: none;
+    font-size: clamp(0.95rem, 4.5vw, 2rem);
+  }
+  
+  .hrd-ls ul {
+    padding: 0;
+  }
+  
+  .sft-ls ul {
+    padding: 0;
+  }
+  
+  .ds-ls li::before {
+    content: '> ';
+  }
+  
+  .hrd-ls li {
+    transition: color 200ms;
+    width: max-content;
+  }
+  
+  .sft-ls li {
+    width: max-content;
+  }
+  
+  .hrd-ls li:nth-child(1) {
+    background: linear-gradient(50deg, rgb(255, 157, 0), rgb(245, 211, 157));
+    background-clip: text;
+    animation: gradientMovement 500ms linear infinite;
+  }
+  
+  .hrd-ls li:nth-child(2) {
+    background: linear-gradient(280deg, rgb(6, 22, 146), rgb(157, 161, 245));
+    background-clip: text;
+    animation: gradientMovement 500ms linear infinite;
+  }
+  
+  .hrd-ls li:nth-child(3) {
+    background: linear-gradient(50deg, rgb(245, 210, 9), rgb(29, 27, 1));
+    background-clip: text;
+    animation: gradientMovement 500ms linear infinite;
+  }
+  
+  .hrd-ls li:nth-child(4) {
+    background: linear-gradient(50deg, rgb(9, 234, 219), rgb(199, 255, 251));
+    background-clip: text;
+    animation: gradientMovement 500ms linear infinite;
+  }
+  
+  .hrd-ls li:nth-child(5) {
+    background: linear-gradient(90deg, rgb(13, 99, 4), rgb(190, 211, 192));
+    background-clip: text;
+    animation: gradientMovement 500ms linear infinite;
+  }
+  
+  .hrd-ls li:hover {
+    color: transparent;
+    font-style: italic;
+  }
+  
+  .sft-ls li:hover {
+    font-style: italic;
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    .fs-container-shrinked {
+      height: 25dvh;
+    }
+  
+    .ds-skls {
+      gap: 1rem;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  
+    .ds-padding {
+      padding: 1rem;
+    }
+  
+    .hrd-ls {
+      /* border: 2px solid red; */
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 45dvw;
+    }
+  
+  }
+  
+  @keyframes shrinky {
+    0% {
+      font-size: 15rem;
+  
+    }
+  
+    100% {
+      font-size: 10rem;
+    }
+  }
+  
+  @keyframes gradientMovement {
+    from {
+      background-position: 0% center;
+    }
+  
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  /* .description-container::after {
+    content: '';
+    position: relative;
+    margin-top: -3rem;
+    width: 100%;
+    height: 0.5rem;
+    background: var(--pink-gang);
+  } */
+  
+  /* .description-container::before {
+    content: '';
+    position: relative;
+    margin-bottom: -3rem;
+    width: 100%;
+    height: 0.5rem;
+    background: var(--pink-gang);
+  } */
+  
+  .description-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-color);
+  }
+  
+  /* Contact component */
+  
+  .border-thingy {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  }
+  
+  .carousel-container {
+    height: 40%;
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    /* align-items: end; */
+  }
+  
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    background: var(--third-variation);
+    /* background-image: var(--gradient-mesh); */
+    /* margin-top: 5rem; */
+    /* border: 2px solid blue; */
+    height: 85%;
+    overflow: hidden;
+    transition: height 200ms;
+  }
+  
+  .carousel-content:hover {
+    height: 100%;
+  }
+  
+  .carousel-container h1 {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: max(17rem, 10%, 32vw);
+    transition: font-size 200ms, color 200ms;
+  }
+  
+  .carousel-content:hover h1 {
+    color: white;
+    font-size: 35vw;
+  }
+  
+  .infinite-carousel {
+    display: flex;
+    gap: 3rem;
+    /* border: 2px solid aqua; */
+    /* height: fit-content; */
+    animation: 45s slide infinite linear;
+    /* margin: -10rem 0; */
+  }
+  
+  .contact-container {
+    height: 60%;
+    /* border: 2px solid greenyellow; */
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--main-color) , #212121);
+  }
+  
+  .ct-cta {
+    width: 90%;
+    /* border: 2px solid green; */
+  }
+  
+  .ct-text {
+    /* border: 2px solid red; */
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ct-links {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-inline: auto;
+    height: 20%;
+    width: max(250px, 45%);
+  }
+  
+  .ct-links p {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+  }
+  
+  .ct-links a {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-weight: 300;
+  }
+  
+  .ct-links>.flex-space {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .word {
+    /* border: 2px solid yellow; */
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    transition: 200ms opacity, background 200ms, transform 200ms;
+    font-weight: 100;
+  }
+  
+  .fancy:hover {
+    transform: scale(1.3);
+  }
+  
+  .ct-links:has(.word:hover) .word:not(.word:hover) {
+    opacity: 0.2;
+  }
+  
+  /* .word::after{
+    content: '';
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 0.25rem;
+    background: white;
+    transition: 200ms width;
+  } */
+  
+  .word:hover::after {
+    width: 100%;
+  }
+  
+  .circle-circlely {
+    /* background: var(--pink-gang); */
+    border-radius: 100%;
+    border: 0.1px solid var(--third-variation);
+    animation: 4s pops linear forwards;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  span {
+    /* color: red; */
+    display: inline-block;
+    transition: 200ms transform;
+    /* transform: translate(10%, 30%) rotate(-8deg); */
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    .carousel-container {
+      height: 30%;
+    }
+  
+    .carousel-container h1 {
+      color: white;
+    }
+  
+    .contact-container {
+      height: 70%;
+    }
+  
+  }
+  
+  @keyframes slide {
+  
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-100%);
+    }
+  
+  }
+  
+  @keyframes pops {
+    0% {
+      transform: scale(1);
+    }
+  
+    20% {
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(100);
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
