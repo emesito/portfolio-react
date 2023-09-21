@@ -611,7 +611,7 @@ section {
   right: 5%;
   top: 20%;
   /* bottom: 5%; */
-  z-index: 2;
+  z-index: 0;
   transition: transform 500ms;
 }
 
