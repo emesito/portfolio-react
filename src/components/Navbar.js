@@ -51,30 +51,30 @@ function Navbar({ handleScroll }) {
 
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const mouseCustom = document.querySelector('.custom-cursor')
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const mouseCustom = document.querySelector('.custom-cursor')
 
-        const mouseHandler = (e) => {
-            const mouseX = e.pageX
-            const mouseY = e.pageY
+    //     const mouseHandler = (e) => {
+    //         const mouseX = e.pageX
+    //         const mouseY = e.pageY
 
-            mouseCustom.style.transform = `translate3d(${mouseX - 6}px, ${mouseY - 6}px, 0)`
-        }
+    //         mouseCustom.style.transform = `translate3d(${mouseX - 6}px, ${mouseY - 6}px, 0)`
+    //     }
 
-        window.addEventListener('mousemove', mouseHandler)
+    //     window.addEventListener('mousemove', mouseHandler)
 
-        const growCustom = () => {
-            mouseCustom.classList.toggle('cursor-grow')
-        }
+    //     const growCustom = () => {
+    //         mouseCustom.classList.toggle('cursor-grow')
+    //     }
         
-    })
+    // })
 
     const growCustom = () => {
         
     }
 
     return (<>
-        <div className='custom-cursor'></div>
+        {/* <div className='custom-cursor'></div> */}
         <nav className="hover-thing">
             <div className="hamburger-icon" onMouseEnter={growCustom} onMouseLeave={growCustom} onClick={clickedNav}>
                 <div className="rect-dimensions"></div>

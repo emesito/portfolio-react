@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './design.css';
+import portrait from './portrait-home.jpeg'
 
 function Introduction({ id }) {
 
@@ -38,6 +39,9 @@ function Introduction({ id }) {
     const introContent = introContentRef.current
     const photoContainer = photoContainerRef.current
 
+    const photoOffSet = photoContainer.offsetTop
+
+    // console.log(photoOffSet)
     // console.log(itrTitle.offsetTop)
 
     // photoContainer.style.top = `40%`
@@ -49,13 +53,17 @@ function Introduction({ id }) {
       const parOS = -((scrollIndex / parTitle.offsetTop) - 1)
       const contentOS = -((scrollIndex / parTitle.offsetTop) - 1)
 
-      const maxBottom = 5
+      const scrollPhoto = ( scrollIndex/photoOffSet ) * 22
+      const scrollPhotoNormal = 1 - (( scrollIndex/photoOffSet ) / 7)
 
-      const scrollPhoto = ( scrollIndex/photoContainer.offsetTop ) * 50
+      const scrollChange = (20 + scrollPhoto)
+
+      // console.log(scrollPhotoNormal)
 
       // photoContainer.style.botttom = `${Math.max(maxBottom, scrollPhoto)}%`
 
-      photoContainer.style.top = `${(20 + scrollPhoto)}%`
+      photoContainer.style.top = `${Math.min(130, scrollChange)}%`
+      photoContainer.style.opacity = `${scrollPhotoNormal}`
       // photoContainer.style.marginTop = `${scrollPhoto}%`
 
       // console.log(Math.max(maxBottom, scrollPhoto))
@@ -100,6 +108,7 @@ function Introduction({ id }) {
         </div>
       </div>
       <section className='photo-company' ref={photoContainerRef}>
+         <img className='image-settings' src={portrait} alt='myself'></img>
       </section>
     </>
   );

@@ -336,7 +336,7 @@ nav {
   right: 5%;
   top: 5%;
   background: var(--yellow-color);
-  z-index: 1;
+  z-index: 2;
   transition: 500ms width, 500ms height;
   border: 3px solid var(--secondary-variation);
   /* mix-blend-mode: difference; */
@@ -511,6 +511,7 @@ section {
   margin-left: 5%;
   width: 100%;
   height: 80%;
+  z-index: 1;
   /* border: 2px solid red; */
 }
 
@@ -554,17 +555,6 @@ section {
   align-items: center;
   height: 100%;
   width: 40%;
-}
-
-figure {
-  height: 90%;
-  width: 80%;
-  border-radius: 2rem;
-  border: 2px solid pink;
-  /* background-image: url('../public/photo1Personal.jpeg'); */
-  background-position: auto 100%;
-  background-size: cover;
-  z-index: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -614,13 +604,25 @@ figure {
 /* Photo Styling */
 
 .photo-company {
-  border: 2px solid red;
-  width: 30dvw;
+  /* border: 2px solid red; */
+  width: 25dvw;
   height: 70dvh;
   position: absolute;
   right: 5%;
   top: 20%;
   /* bottom: 5%; */
+  z-index: 2;
+  transition: transform 500ms;
+}
+
+.image-settings {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-company:hover {
+  transform: scale(1.05);
 }
 
 /* Styling for the descritpion component */
@@ -681,6 +683,7 @@ figure {
 
 .ds-padding {
   padding: 2rem 1rem;
+  z-index: 1;
 }
 
 .ds-skls {
@@ -688,6 +691,7 @@ figure {
   flex-direction: row;
   /* border: 2px solid green; */
   justify-content: space-around;
+  z-index: 1;
 }
 
 .ds-ls h4 {
@@ -763,6 +767,11 @@ figure {
 }
 
 @media screen and (max-width: 600px) {
+
+  .photo-company {
+    width: 50dvw;
+    height: 50dvh;
+  }
 
   .fs-container-shrinked {
     height: 25dvh;
