@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/emesito/portfolio-react/static/css/main.a442eeb8.css",
+    "main.js": "/emesito/portfolio-react/static/js/main.c4a4c853.js",
+    "static/js/787.aeca62f9.chunk.js": "/emesito/portfolio-react/static/js/787.aeca62f9.chunk.js",
+    "static/media/portrait-home.jpeg": "/emesito/portfolio-react/static/media/portrait-home.4fa174f6515a3ce5d43d.jpeg",
+    "index.html": "/emesito/portfolio-react/index.html",
+    "main.a442eeb8.css.map": "/emesito/portfolio-react/static/css/main.a442eeb8.css.map",
+    "main.c4a4c853.js.map": "/emesito/portfolio-react/static/js/main.c4a4c853.js.map",
+    "787.aeca62f9.chunk.js.map": "/emesito/portfolio-react/static/js/787.aeca62f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a442eeb8.css",
+    "static/js/main.c4a4c853.js"
+  ]
+}
