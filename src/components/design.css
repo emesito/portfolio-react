@@ -8,33 +8,23 @@
   /* --main-color: hsl(240, 26%, 5%); */
   --main-color: #121212;
   --primary-color: #1c542d;
-  --yellow-color: hsla(190, 53%, 19%, 1);
+  --yellow-color: #121212;
   --secondary-variation: #e6daa8;
-  --third-variation: #17424b;
+  /* --third-variation: color-mix(in hsl, hsl(273, 22%, 49%), hsl(60, 75%, 41%) 80%); */
+  --second-variation: hsl(273, 22%, 49%);
+  --third-variation: #121212;
   --secondary-color: linear-gradient(120deg, var(--third-variation), var(--primary-color), #0a5766);
   --pink-gang: #df00ad;
   --font-color: #ffff;
   --green-color: #4caf50;
   --gray-color: #808080;
   --blue-color: #007acc;
-  --gradient-mesh: radial-gradient(at 81% 76%, hsla(190, 53%, 19%, 1) 0px, transparent 50%),
-    radial-gradient(at 53% 29%, hsl(138, 40%, 51%) 0px, transparent 50%),
-    radial-gradient(at 78% 22%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
-    radial-gradient(at 22% 25%, hsla(193, 59%, 64%, 1) 0px, transparent 50%),
-    radial-gradient(at 22% 89%, hsla(157, 60%, 75%, 1) 0px, transparent 50%);
   --black-mesh: radial-gradient(at 47% 8%, hsla(180, 0%, 0%, 1) 0px, transparent 50%),
     radial-gradient(at 54% 59%, hsla(180, 12%, 4%, 1) 0px, transparent 50%),
     radial-gradient(at 15% 97%, hsla(180, 1%, 16%, 1) 0px, transparent 50%),
     radial-gradient(at 77% 11%, hsla(183, 3%, 11%, 1) 0px, transparent 50%),
     radial-gradient(at 86% 100%, hsla(240, 3%, 13%, 1) 0px, transparent 50%),
     radial-gradient(at 0% 2%, hsla(341, 0%, 20%, 1) 0px, transparent 50%);
-  --black-mesh-test: radial-gradient(at var(--x) var(--y), hsla(122, 3%, 16%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x1) var(--y1), hsla(73, 2%, 12%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x2) var(--y2), hsla(180, 0%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x3) var(--y3), hsla(180, 12%, 4%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x4) var(--y4), hsla(180, 1%, 16%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x5) var(--y5), hsla(183, 3%, 11%, 1) 0px, transparent 50%),
-    radial-gradient(at var(--x6) var(--y6), hsla(240, 3%, 13%, 1) 0px, transparent 50%);
 }
 
 html {
@@ -97,54 +87,6 @@ body {
   initial-value: 8%;
 }
 
-@property --x3 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 54%;
-}
-
-@property --y3 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 59%;
-}
-
-@property --x4 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 13%;
-}
-
-@property --y4 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 20%;
-}
-
-@property --x5 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 77%;
-}
-
-@property --y5 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 11%;
-}
-
-@property --x6 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 86%;
-}
-
-@property --y6 {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 100%;
-}
-
 .mesh-container {
   --x: 34%;
   --y: 37%;
@@ -152,23 +94,11 @@ body {
   --y1: 51%;
   --x2: 47%;
   --y2: 8%;
-  --x3: 54%;
-  --y3: 39%;
-  --x4: 13%;
-  --y4: 20%;
-  --x5: 77%;
-  --y5: 11%;
-  --x6: 66%;
-  --y6: 40%;
   width: 100%;
   background: linear-gradient(to bottom, #121212, transparent);
-  background-image: radial-gradient(at var(--x) var(--y), hsla(120, 3%, 26%, 1) 0px, transparent 50%),
+  background-image: radial-gradient(at var(--x) var(--y), hsla(273, 22%, 49%, 0.3) 0px, transparent 60%),
     radial-gradient(at var(--x1) var(--y1), hsla(60, 75%, 41%, 0.5) 0px, transparent 50%),
-    radial-gradient(at var(--x2) var(--y2), hsla(240, 51%, 53%, 0.3) 0px, transparent 50%),
-    radial-gradient(at var(--x3) var(--y3), hsla(180, 74%, 45%, 0.4) 0px, transparent 50%),
-    radial-gradient(at var(--x4) var(--y4), hsla(180, 77%, 48%, 0.5) 0px, transparent 50%),
-    radial-gradient(at var(--x5) var(--y5), hsla(180, 38%, 46%, 0.3) 0px, transparent 50%),
-    radial-gradient(at var(--x6) var(--y6), hsla(240, 69%, 40%, 0.1) 0px, transparent 50%);
+    radial-gradient(at var(--x2) var(--y2), hsla(240, 51%, 53%, 0.3) 0px, transparent 50%);
   animation: testMovement 50s linear infinite;
   z-index: 3;
   overflow-y: hidden;
@@ -182,14 +112,6 @@ body {
     --y1: 51%;
     --x2: 47%;
     --y2: 8%;
-    --x3: 54%;
-    --y3: 39%;
-    --x4: 13%;
-    --y4: 20%;
-    --x5: 77%;
-    --y5: 11%;
-    --x6: 66%;
-    --y6: 40%;
   }
 
   50% {
@@ -199,14 +121,6 @@ body {
     --y1: 52%;
     --x2: 50%;
     --y2: 35%;
-    --x3: 74%;
-    --y3: 19%;
-    --x4: 33%;
-    --y4: 49%;
-    --x5: 27%;
-    --y5: 41%;
-    --x6: 76%;
-    --y6: 30%;
   }
 
   100% {
@@ -216,14 +130,6 @@ body {
     --y1: 51%;
     --x2: 47%;
     --y2: 8%;
-    --x3: 54%;
-    --y3: 39%;
-    --x4: 13%;
-    --y4: 20%;
-    --x5: 77%;
-    --y5: 11%;
-    --x6: 66%;
-    --y6: 40%;
   }
 }
 
@@ -338,7 +244,8 @@ nav {
   background: var(--yellow-color);
   z-index: 2;
   transition: 500ms width, 500ms height;
-  border: 3px solid var(--secondary-variation);
+  /* border: 3px solid var(--secondary-variation); */
+  /* mix-blend-mode: difference; */
   /* mix-blend-mode: difference; */
 }
 
@@ -538,6 +445,9 @@ section {
   height: 100%;
   width: 0.5rem;
   background: var(--font-color);
+  opacity: 0;
+  animation: lightEffect 1000ms 2200ms ease-in-out forwards, glow 1000ms ease-in-out infinite;
+  box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.2);
 }
 
 .intro-content::before {
@@ -546,6 +456,9 @@ section {
   height: 100%;
   width: 0.5rem;
   background: var(--font-color);
+  opacity: 0;
+  animation: lightEffect 1200ms 2000ms ease-in-out forwards, glow 1100ms ease-in-out infinite;
+  box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.2);
 }
 
 .intro-photo {
@@ -557,6 +470,85 @@ section {
   width: 40%;
 }
 
+.intro-anim {
+  opacity: 0;
+  position: relative;
+  animation: topFade 1000ms ease-in-out forwards;
+}
+
+.itr-par {
+  animation: topFade 1000ms 1000ms ease-in-out forwards;
+  opacity: 0;
+}
+
+.intro-anim:nth-child(1) {
+  animation-delay: 100ms;
+  animation: topFade 800ms ease-in-out forwards;
+}
+
+.intro-anim:nth-child(2) {
+  animation-delay: 200ms;
+  animation: topFade 1100ms ease-in-out forwards;
+}
+
+@keyframes topFade {
+  from {
+    bottom: 150%;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightEffect {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  30% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 10px 6px rgba(255, 255, 255, 0.2);
+  }
+}
+
 @media screen and (max-width: 600px) {
 
   .mesh-container {
@@ -565,13 +557,9 @@ section {
 
   #introduction {
     background: linear-gradient(to bottom, #121212, transparent);
-    background-image: radial-gradient(at var(--x) var(--y), hsla(120, 3%, 26%, 1) 0px, transparent 50%),
-      radial-gradient(at var(--x1) var(--y1), hsla(60, 75%, 41%, 0.5) 0px, transparent 50%),
-      radial-gradient(at var(--x2) var(--y2), hsla(240, 51%, 53%, 0.3) 0px, transparent 50%),
-      radial-gradient(at var(--x3) var(--y3), hsla(180, 74%, 45%, 0.4) 0px, transparent 50%),
-      radial-gradient(at var(--x4) var(--y4), hsla(180, 77%, 48%, 0.5) 0px, transparent 50%),
-      radial-gradient(at var(--x5) var(--y5), hsla(180, 38%, 46%, 0.3) 0px, transparent 50%),
-      radial-gradient(at var(--x6) var(--y6), hsla(240, 69%, 40%, 0.1) 0px, transparent 50%);
+    background-image: radial-gradient(at var(--x) var(--y), hsla(273, 22%, 49%, 0.3) 0px, transparent 60%),
+    radial-gradient(at var(--x1) var(--y1), hsla(60, 75%, 41%, 0.5) 0px, transparent 50%),
+    radial-gradient(at var(--x2) var(--y2), hsla(240, 51%, 53%, 0.3) 0px, transparent 50%);
     animation: testMovement 30s linear infinite;
   }
 
@@ -657,9 +645,10 @@ section {
 }
 
 .ds-title {
-  font-size: clamp(6rem, 10vw, 15rem);
+  font-size: clamp(5rem, 10vw, 15rem);
   transition: font-size 1000ms;
   position: relative;
+  mix-blend-mode: difference;
   /* top: 15rem; */
   /* opacity: 0; */
 }
@@ -771,6 +760,7 @@ section {
   .photo-company {
     width: 50dvw;
     height: 50dvh;
+    top: 50%;
   }
 
   .fs-container-shrinked {
@@ -878,14 +868,15 @@ section {
 }
 
 .carousel-container h1 {
-  color: var(--main-color);
+  /* color: var(--main-color); */
+  color: white;
   text-transform: uppercase;
   font-size: max(17rem, 10%, 32vw);
   transition: font-size 200ms, color 200ms;
 }
 
 .carousel-content:hover h1 {
-  color: white;
+  color: var(--second-variation);
   font-size: 35vw;
 }
 

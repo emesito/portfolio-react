@@ -40,6 +40,17 @@ function Introduction({ id }) {
     const photoContainer = photoContainerRef.current
 
     const photoOffSet = photoContainer.offsetTop
+    const computedPhotoContainer = window.getComputedStyle(photoContainer)
+
+    const heightParent = photoContainer.parentElement.clientHeight
+
+    // console.log(heightParent)
+
+    const topPhoto = parseFloat(computedPhotoContainer.top)
+
+    const percentage =  ( topPhoto / heightParent ) * 200
+
+    // console.log(percentage)
 
     // console.log(photoOffSet)
     // console.log(itrTitle.offsetTop)
@@ -49,14 +60,16 @@ function Introduction({ id }) {
     const handleIntro = () => {
       const scrollIndex = window.scrollY
 
-      const titleOS = -((scrollIndex / itrTitle.offsetTop) - 1)
-      const parOS = -((scrollIndex / parTitle.offsetTop) - 1)
-      const contentOS = -((scrollIndex / parTitle.offsetTop) - 1)
+      const titleOS = (1 - (scrollIndex / itrTitle.offsetTop))
+      const parOS = (1 -(scrollIndex / parTitle.offsetTop))
+      const contentOS = (1 - (scrollIndex / parTitle.offsetTop))
 
-      const scrollPhoto = ( scrollIndex/photoOffSet ) * 22
-      const scrollPhotoNormal = 1 - (( scrollIndex/photoOffSet ) / 7)
+      const scrollCalc = ( scrollIndex/photoOffSet )
 
-      const scrollChange = (20 + scrollPhoto)
+      const scrollPhoto = scrollCalc * 5
+      const scrollPhotoNormal = 1 - (scrollCalc / 7)
+
+      const scrollChange = (percentage + scrollPhoto)
 
       // console.log(scrollPhotoNormal)
 
@@ -102,7 +115,7 @@ function Introduction({ id }) {
         }
         <div className='intro-div'>
           <section className='intro-content' ref={introContentRef}>
-            <h1 className='itr-title' ref={itrTitleRef}>Hola, soy Miguel Ruz</h1>
+            <h1 className='itr-title' ref={itrTitleRef}><span className='intro-anim'>Hola,</span> <span className='intro-anim'>soy</span> <span className='intro-anim'>Miguel Ruz</span></h1>
             <p className='itr-par' ref={itrParRef}>Persiguiendo el sueño de ser front-end developer.</p>
           </section>
         </div>

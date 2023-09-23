@@ -117,8 +117,8 @@ function Contact({ id }) {
                                 <p className='word'>Ruz</p>
                             </div>
                             <div className='flex-space ct-links-socials'>
-                                <p className='word'>Ig</p>
-                                <p className='word'>@Emesito</p>
+                                <p className='word'>Links</p>
+                                <p className='word'>Contacto</p>
                             </div>
                             <div className='flex-space ct-links-word'>
                                 <a id='mail' onMouseEnter={testElement} onMouseLeave={revertEffect} className='word fancy mail' href='mailto:mi.ruzbaez@gmail.com'>Email</a>
